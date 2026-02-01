@@ -1,5 +1,5 @@
-import express from 'express';
 import dotenv from 'dotenv';
+import express from 'express';
 import cors from 'cors';
 import connectDatabase from './config/database.js';
 import cookieParser from 'cookie-parser';
@@ -58,6 +58,5 @@ connectDatabase().then(() => {
     app.listen(port, () => {
         console.log(`Server listening at port ${port}`);
     });
-}).catch(error => {
-    console.error('Failed to connect to the database:', error);
-});
+})
+
